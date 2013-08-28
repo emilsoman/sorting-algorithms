@@ -1,0 +1,142 @@
+@import url(http://fonts.googleapis.com/css?family=Alfa+Slab+One);
+body {
+  background-color: #787878;
+    background: #333 url(http://codepen.io/images/classy_fabric.png);
+}
+#panel {
+    width: 920px;
+    height: 190px;
+    position: relative;
+    margin: 10px auto;
+}
+#right {
+    width: 300px;
+    height: 190px;
+    position: relative;
+    float: right;
+    margin-top: 10px;
+}
+#caption {
+    width: 100%;
+    font-family: 'Alfa Slab One', Arial;
+    font-weight: normal;
+    font-size: 32px;
+    color: #DDD;
+    text-align: center;
+    text-shadow: 0px 0px 5px #222;
+    text-transform: uppercase;
+    line-height: 35px;
+    margin-bottom: 10px;
+}
+#sortPanel {
+    width: 565px;
+    height: 165px;
+    margin: 10px 15px;
+    display: block;
+    border: 0px solid #fff;
+}
+#sortPanel td {
+    height: 165px;
+    width: 11px;
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+    padding: 0;
+    position: relative;
+}
+.cc {
+    display: block;
+    width: 5px;
+    position: absolute;
+    bottom: 0px;
+    background-color: #999;
+    border-top: 4px solid #fff;
+    margin: 0px;
+    margin-top: 4px;
+}
+.ccH1 {
+    display: block;
+    width: 5px;
+    background-color: #F22613;
+    margin: 0px;
+    position: absolute;
+    bottom: 0px;
+}
+.ccH2 {
+    display: block;
+    width: 5px;
+    background-color: #F2B705;
+    margin: 0px;
+    position: absolute;
+    bottom: 0px;
+}
+#buttons {
+    width: 310px;
+    text-align: center;
+    margin-top: 10px;
+}
+#left {
+    width: 590px;
+    height: 190px;
+    margin: 10px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 3px #000;
+    -moz-box-shadow: 0 1px 3px #000;
+    border-top: 1px solid #555;
+    box-shadow: 0 1px 3px #000;
+    background: -webkit-linear-gradient(#444, #333);
+    background: -moz-linear-gradient(#444, #333);
+    background: -o-linear-gradient(#444, #333);
+    background: -ms-linear-gradient(#444, #333);
+    background: linear-gradient(#444, #333);
+    position: relative;
+    float: left;
+}
+a:link, a:visited, a:active {
+    text-decoration: none;
+}
+a:hover {
+    color: #FA7000;
+}
+.button {
+    display: inline-block;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    width: 85px;
+    line-height: 40px;
+    margin: 10px 2px 10px 2px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 3px #000;
+    -moz-box-shadow: 0 1px 3px #000;
+    border-top: 1px solid #fff;
+    box-shadow: 0 2px 4px #000;
+    background: -webkit-linear-gradient(#ededed, #ddd);
+    background: -moz-linear-gradient(#ededed, #ddd);
+    background: -o-linear-gradient(#ededed, #ddd);
+    background: -ms-linear-gradient(#ededed, #ddd);
+    background: linear-gradient(#ededed, #ddd);
+}
+
+.reset {
+    width: 267px;
+}
+
+.disable {
+    color: #999;
+    border-top: 1px solid #bbb;
+    background: -webkit-linear-gradient(#aaa, #bbb);
+    background: -moz-linear-gradient(#aaa, #bbb);
+    background: -o-linear-gradient(#aaa, #bbb);
+    background: -ms-linear-gradient(#aaa, #bbb);
+    background: linear-gradient(#aaa, #bbb);
+}
+a:hover.disable {
+    color: #999;
+}
