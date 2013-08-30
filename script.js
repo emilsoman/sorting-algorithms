@@ -224,7 +224,7 @@ var quick = {
     sort: function(arr) {
         intQueue = setInterval(function(){runQueue()},0);
     this.a = arr.slice();
-    this.qsort(0, this.a.length);
+    this.qsort(0, this.a.length-1);
     return this.a;
     
     },
