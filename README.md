@@ -3,7 +3,7 @@ As a fresher, debug the program with the help of browser developer tools using b
 
 The catch - also document your steps below. 
 
-Name : 
+Name : Hemant Chandak 
 
 
 Selection Sort
