@@ -209,7 +209,7 @@ var selectionsort = {
             for (var j = i+1; j < this.a.length ; j++)
             {
                 if (this.a[j] < this.a[max])
-                    max = i;
+                    max = j;
             }
             this.a.swapVerbose(i, max);
         }
