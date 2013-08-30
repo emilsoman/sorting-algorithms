@@ -203,7 +203,7 @@ var selectionsort = {
    sort: function(arr) {
         this.a = arr.slice();
         intQueue = setInterval(function(){runQueue()},0);
-        for (var i = 0; i < this.a.length-1; i++)
+        for (var i = 0; i < this.a.length; i++)
         {
             max = i;
             for (var j = 0; j < i; j++)
