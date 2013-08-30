@@ -206,10 +206,10 @@ var selectionsort = {
         for (var i = 0; i < this.a.length; i++)
         {
             max = i;
-            for (var j = 0; j < i; j++)
+            for (var j = i+1; j < this.a.length; j++)
             {
                 if (this.a[j] < this.a[max])
-                    max = i;
+                    max = j;
             }
             this.a.swapVerbose(i, max);
         }
@@ -250,7 +250,7 @@ var quick = {
     {
         var q = this.part(p, r);
         this.qsort(p, q);
-        this.qsort(q, r);
+        this.qsort(q+1, r);
     }
     }
 }
