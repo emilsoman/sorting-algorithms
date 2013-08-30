@@ -250,7 +250,7 @@ var quick = {
     {
         var q = this.part(p, r);
         this.qsort(p, q);
-        this.qsort(q, r);
+        this.qsort(q+1, r);
     }
     }
 }
