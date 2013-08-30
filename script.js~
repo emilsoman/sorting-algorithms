@@ -40,7 +40,7 @@ var resetted = false;
 // Generate array of rundom number and reset panel
 function reset() {
     for (i=0; i<50; ++i) {
-        data[i] = ~~(i*160/50);
+        data[i] = ~~(i*160/5);
     }
     for (i=data.length-1; i>=0; --i) {
         var ridx = ~~( Math.random() * ( data.length ) );
