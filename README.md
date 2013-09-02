@@ -3,23 +3,16 @@ As a fresher, debug the program with the help of browser developer tools using b
 
 The catch - also document your steps below. 
 
-Name : 
+Name : Nagasundaram
 
 
-Selection Sort
-==============
-
-## Steps
-
-1. Step 1
-2. Step 2
-3. ...
-
-QuickSort
-=========
+Selection Sort and QuickSort
+============================
 
 ## Steps
 
-1. Step 1
-2. Step 2
-3. ...
+1. Put some breakpoints in the quick sort and selection sort part of script.js
+2. Analyse the values of variable that are used for array and array indices by hovering the mouse on those variables
+3. As we know the basic logic of quick sort and selection sort I made some changes in conditional statements and assignment statements.
+
+
