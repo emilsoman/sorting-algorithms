@@ -39,8 +39,8 @@ var resetted = false;
 
 // Generate array of rundom number and reset panel
 function reset() {
-    for (i=0; i<50; ++i) {
-        data[i] = ~~(i*160/50);
+    for (i=0; i<5; ++i) {
+        data[i] = ~~(i*160/5);
     }
     for (i=data.length-1; i>=0; --i) {
         var ridx = ~~( Math.random() * ( data.length ) );
@@ -206,10 +206,10 @@ var selectionsort = {
         for (var i = 0; i < this.a.length; i++)
         {
             max = i;
-            for (var j = 0; j < i; j++)
+            for (var j = i+1; j < this.a.length; j++)
             {
                 if (this.a[j] < this.a[max])
-                    max = i;
+                    max = j;
             }
             this.a.swapVerbose(i, max);
         }
@@ -224,35 +224,38 @@ var quick = {
     sort: function(arr) {
         intQueue = setInterval(function(){runQueue()},0);
     this.a = arr.slice();
-    this.qsort(0, this.a.length);
+    this.qsort(0, this.a.length-1);
     return this.a;
     
     },
-    part: function(p, r) {
-    var v = this.a[p];
-    var i = p;
-    var j = r;
-    while (true) {
-        while (this.a[j] > v) j--;
-        while (this.a[i] < v) i++;
-        if (i < j)
-        {
-        this.a.swapVerbose(i, j);
-        i++;
-        j -= 1;
-        } else { 
-        return j;
-        }
-    }
-    },
-    qsort: function(p, r) {
-    if (p < r)
-    {
-        var q = this.part(p, r);
-        this.qsort(p, q);
-        this.qsort(q, r);
-    }
-    }
+    part: function(p, r) 
+	{
+			var v = p;
+			var i = p;
+			var j = r;
+			while (i<=j) 
+			{
+				while (this.a[i] <= this.a[v] ) i++;
+       	 			while (this.a[j] > this.a[v]) j--;
+        			
+        			if (i < j)
+        			{
+        				this.a.swapVerbose(i, j);
+        			}
+			}
+			this.a.swapVerbose(j,v);	
+			return j;
+    	},
+    qsort: function(p, r) 
+	{
+	    if (p < r)
+	    {
+	        var q = this.part(p, r);
+
+	        this.qsort(p, q-1);
+	        this.qsort(q+1, r);
+	    }
+    	}
 }
 
 //
