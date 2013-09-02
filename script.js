@@ -205,13 +205,13 @@ var selectionsort = {
         intQueue = setInterval(function(){runQueue()},0);
         for (var i = 0; i < this.a.length; i++)
         {
-            max = i;
-            for (var j = 0; j < i; j++)
+            min = i;
+            for (var j = i+1; j < this.a.length; j++)
             {
-                if (this.a[j] < this.a[max])
-                    max = i;
+                if (this.a[j] < this.a[min])
+                    min = j;
             }
-            this.a.swapVerbose(i, max);
+            this.a.swapVerbose(i, min);
         }
    }
 }
@@ -224,7 +224,7 @@ var quick = {
     sort: function(arr) {
         intQueue = setInterval(function(){runQueue()},0);
     this.a = arr.slice();
-    this.qsort(0, this.a.length);
+    this.qsort(0, this.a.length-1);
     return this.a;
     
     },
@@ -250,7 +250,7 @@ var quick = {
     {
         var q = this.part(p, r);
         this.qsort(p, q);
-        this.qsort(q, r);
+        this.qsort(q+1, r);
     }
     }
 }
